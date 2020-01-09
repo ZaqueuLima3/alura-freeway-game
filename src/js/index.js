@@ -10,4 +10,6 @@ function draw() {
 
   moveAvatar();
   moveCar();
+
+  resetPositionInitial();
 }

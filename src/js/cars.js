@@ -1,28 +1,24 @@
 // --- Cars settings
-
-// car 1
-let xCar1 = 700;
-let yCar1 = 40;
-let speedCar1 = 2;
-
-// car 2
-let xCar2 = 700;
-let yCar2 = 96;
-let speedCar2 = 3;
-
-// car 3
-let xCar3 = 700;
-let yCar3 = 150;
-let speedCar3 = 2.5;
+let xCars = [700, 700, 700, 700, 700, 700];
+let yCars = [40, 96, 150, 210, 260, 320];
+let speedCars = [2, 2.5, 3.2, 2.5, 3.2, 3.5];
 
 function showCar() {
-  image(imageCar, xCar1, yCar1, 60, 40);
-  image(imageCar2, xCar2, yCar2, 60, 40);
-  image(imageCar3, xCar3, yCar3, 60, 40);
+  for (let i = 0; i < imagesCars.length; i++) {
+    image(imagesCars[i], xCars[i], yCars[i], 60, 40);
+  }
 }
 
 function moveCar() {
-  xCar1 -= speedCar1;
-  xCar2 -= speedCar2;
-  xCar3 -= speedCar3;
+  for (let i = 0; i < xCars.length; i++) {
+    xCars[i] -= speedCars[i];
+  }
+}
+
+function resetPositionInitial(x) {
+  for (let i = 0; i < xCars.length; i++) {
+    if (xCars[i] < -60) {
+      xCars[i] = 700;
+    }
+  }
 }
