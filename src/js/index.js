@@ -3,5 +3,11 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(imageRoad);
+
+  showAvatar();
+  showCar();
+
+  moveAvatar();
+  moveCar();
 }
